@@ -11,10 +11,10 @@ class Flower:  # Note that parens are optional if not inheriting from another cl
     self.color = color
 
 flowers = [
-  Flower('Lolo', 'tabby', 'Kinda rude.', 3),
-  Flower('Sachi', 'tortoiseshell', 'Looks like a turtle.', 0),
-  Flower('Fancy', 'bombay', 'Happy fluff ball.', 4),
-  Flower('Bonk', 'selkirk rex', 'Meows loudly.', 6)
+  Flower('Camelia', 'common', '', 'Pink'),
+  Flower('Gloriosa', 'rare', '', 'Multi-colored'),
+  Flower('Peony', 'common', '', 'Coral'),
+  Flower('Hydrangea', 'common', '', 'Blue')
 ]
 
 # Create your views here.
