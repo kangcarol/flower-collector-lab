@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/flowers/flower-index.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>flower List</h1>
+  <img src="{% static 'images/cool-flower.svg' %}" alt="A cool flower" />
+  <img src="{% static 'images/happy-flower.svg' %}" alt="A happy flower" />
+  <img src="{% static 'images/teacup-flower.svg' %}" alt="A flower in a teacup" />
+  <img src="{% static 'images/flower-in-box.svg' %}" alt="A flower in a box" />
+</section>
+
+<section class="card-container">
+  {% for flower in flowers %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          <img 
+            src="{% static 'images/sk8r-boi-flower.svg' %}" 
+            alt="A skater boy flower"
+          >
+        </div>
+        <h2 class="card-title">{{ flower.name }}</h2>
+        {% if flower.age > 0 %}
+          <p>A {{ flower.age }} year old {{ flower.breed }}</p>
+        {% else %}
+          <p>A {{ flower.breed }} kitten.</p>
+        {% endif %}
+        <p><small>{{ flower.description }}</small></p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
