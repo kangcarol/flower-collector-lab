@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/flowers/flower-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class='flower-container'>
+  <div class="flower-img">
+    <img 
+    src="{% static 'images/'|add:flower.name|add:'.png' %}"
+    alt="flower"
+    width="250px"
+    height="250px"
+    >
+  </div>
+  <h2 class="card-title">{{ flower.name }}</h2>
+  {% comment %} {% if flower.color > 0 %} {% endcomment %}
+    {% comment %} <p>A {{ flower.color }} {{ flower.type }}</p> {% endcomment %}
+  {% comment %} {% else %} {% endcomment %}
+    <p>A {{ flower.type }} flower.</p>
+  {% comment %} {% endif %} {% endcomment %}
+  <p><small>{{ flower.location }}</small></p>
+  </div>
+</section>
+
+{% endblock %}

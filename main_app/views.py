@@ -1,28 +1,38 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
+from .models import Flower
 
-from django.http import HttpResponse
+# # Add the Flower class & list and view function below the imports
+# class Flower:  # Note that parens are optional if not inheriting from another class
+#   def __init__(self, name, type, description, color):
+#     self.name = name
+#     self.type = type
+#     self.description = description
+#     self.color = color
 
-# Add the Flower class & list and view function below the imports
-class Flower:  # Note that parens are optional if not inheriting from another class
-  def __init__(self, name, type, description, color):
-    self.name = name
-    self.type = type
-    self.description = description
-    self.color = color
-
-flowers = [
-  Flower('Camelia', 'common', '', 'Pink'),
-  Flower('Gloriosa', 'rare', '', 'Multi-colored'),
-  Flower('Peony', 'common', '', 'Coral'),
-  Flower('Hydrangea', 'common', '', 'Blue')
-]
+# flowers = [
+#   Flower('Camelia', 'common', 'Found in eastern and southern Asia, from the Himalayas east to Japan and Indonesia.', 'Pink'),
+#   Flower('Gloriosa', 'rare', 'Native in tropical and southern Africa to Asia, and naturalised in Australia and the Pacific as well as being widely cultivated.', 'Multi-colored'),
+#   Flower('Peony', 'common', 'Native to Asia, Europe and Western North America.', 'Coral'),
+#   Flower('Hydrangea', 'common', 'Native to Asia and the Americas. By far the greatest species diversity is in eastern Asia, notably China, Korea, and Japan.', 'Blue')
+# ]
 
 # Create your views here.
 def home(request):
-  return HttpResponse('<h1>Hello there!</h1>')
+  return render(request, 'home.html')
 
 def about(request):
   return render(request, 'about.html')
 
 def flowers_index(request):
-  return render(request, 'flowers/index.html', { 'flowers': flowers})
+  flowers = Flower.objects.all()
+  return render(request, 'flowers/index.html', { 'flowers': flowers })
+
+def flowers_detail(request, flower_id):
+  flower = Flower.objects.get(id=flower_id)
+  return render(request, 'cats/detail.html', { 'flower': flower })
+
+class FlowerCreate(CreateView):
+  model = Flower
+  fields = '__all__'
+  # success_url = '/flowers/'

@@ -9,7 +9,7 @@
   <link 
     rel="shortcut icon" 
     type="image/png"
-    href="{% static 'images/camelia.png' %}"
+    href="{% static 'images/camellia-logo.png' %}"
   >
   <title>Flower Collector</title>
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
@@ -21,20 +21,21 @@
     <div class="header-logo-container">
       <a href="/">
         <img 
-          src="{% static 'images/camelia.png' %}" 
+          src="{% static 'images/camellia-logo.png' %}" 
           alt="The Flower Collector Logo"
-          width="30px"
-          height="30px"
+          width='30px'
+          height='30px'
         >
       </a>
     </div>
+    <nav>
+      <ul>
+        <li><a href="/flowers">All Flowers</a></li>
+        <li><a href="{% url 'flowers_create' %}">Add a Flower</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
   </header>
-  <nav>
-    <ul>
-      <li><a href="/flowers">All Flowers</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
-  </nav>
   <main>
     {% block content %}
     {% endblock %}

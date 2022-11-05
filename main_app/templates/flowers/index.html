@@ -13,31 +13,32 @@
 
 <section class="page-header">
   <h1>Flower List</h1>
-  <img src="{% static 'images/camelia.png' %}" alt="camellia" />
-  <img src="{% static 'images/gloriosa.png' %}" alt="gloriosa" />
-  <img src="{% static 'images/peony.png' %}" alt="peony" />
-  <img src="{% static 'images/hydrangea.png' %}" alt="hydrangea" />
+  <img src="{% static 'images/Camellia.png' %}" alt="camellia" />
+  <img src="{% static 'images/Gloriosa.png' %}" alt="gloriosa" />
+  <img src="{% static 'images/Peony.png' %}" alt="peony" />
+  <img src="{% static 'images/Hydrangea.png' %}" alt="hydrangea" />
 </section>
 
 <section class="card-container">
   {% for flower in flowers %}
     <div class="card">
+      <a href="/flowers/{{ flower.id }}">
       <div class="card-content">
         <div class="card-img-container">
           <img 
-            src="{% static 'images/camelia.png' %}" 
-            alt="camelia"
+            src="{% static 'images/'|add:flower.name|add:'.png' %}"
+            alt="flower"
             width="250px"
             height="250px"
           >
         </div>
         <h2 class="card-title">{{ flower.name }}</h2>
-        {% if flower.color > 0 %}
-          <p>A {{ flower.color }} {{ flower.type }}</p>
-        {% else %}
+        {% comment %} {% if flower.color > 0 %} {% endcomment %}
+          {% comment %} <p>A {{ flower.color }} {{ flower.type }}</p> {% endcomment %}
+        {% comment %} {% else %} {% endcomment %}
           <p>A {{ flower.type }} flower.</p>
-        {% endif %}
-        <p><small>{{ flower.description }}</small></p>
+        {% comment %} {% endif %} {% endcomment %}
+        <p><small>{{ flower.location }}</small></p>
       </div>
     </div>
   {% endfor %}
