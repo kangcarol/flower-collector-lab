@@ -16,7 +16,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 60%;
-  padding: 10% 0 0 0;
+  padding: 5% 0 0 0;
 }
 
 .flower-detail-img {
@@ -39,7 +39,7 @@ img {
 }
 
 .card-title {
-  margin: 8px;
+  margin: 12px 8px 8px 8px;
 }
 
 p {

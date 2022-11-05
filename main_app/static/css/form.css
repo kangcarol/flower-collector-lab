@@ -21,6 +21,8 @@ th {
 
 td {
   max-width: 80%;
+  font-family: inherit;
+  font-size: var(--font-reg); 
 }
 
 td > * {
@@ -33,6 +35,12 @@ td > * {
 td > textarea {
   height: calc(4 * var(--font-l) + 8px);
   font-family: inherit;
+  font-size: var(--font-reg); 
+}
+
+td > input {
+  font-family: inherit;
+  font-size: var(--font-reg); 
 }
 
 .btn {
