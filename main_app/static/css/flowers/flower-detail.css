@@ -1,14 +1,32 @@
-.flower-container {
-  padding: 35px 30px;
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.flower-img {
-  width: 75%;
+.detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+}
+
+.flower-detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 10% 0 0 0;
+}
+
+.flower-detail-img {
+  width: 50%;
   max-width: 350px;
+  border-radius: 5%;
+}
+
+img {
+  border-radius: 5%; 
 }
 
 .usr-img {
@@ -18,6 +36,15 @@
 
 .flower-details {
   width: 98%;
+}
+
+.card-title {
+  margin: 8px;
+}
+
+p {
+  font-size: medium;
+  margin: 8px;
 }
 
 .flower-actions {
@@ -90,7 +117,7 @@
 }
 
 .flower-details p {
-  font-size: var(--font-reg);
+  font-size: var(--font-xl);
   margin: 5px 0;
 }
 

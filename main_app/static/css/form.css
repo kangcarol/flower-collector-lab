@@ -5,7 +5,7 @@
 }
 
 table {
-  padding: 0 40px;
+  padding: 0 100px 0 150px;
   width: 100%;
   border-spacing: 0 20px;
 }
@@ -13,13 +13,14 @@ table {
 th {
   text-align: left;
   padding: 6px 20px 0 0;
+  width: 10%;
   font-weight: normal;
   vertical-align: top;
   font-size: var(--font-reg);
 }
 
 td {
-  max-width: 60%;
+  max-width: 80%;
 }
 
 td > * {
@@ -36,5 +37,5 @@ td > textarea {
 
 .btn {
   align-self: flex-end;
-  margin-right: 40px;
+  margin-right: 100px;
 }

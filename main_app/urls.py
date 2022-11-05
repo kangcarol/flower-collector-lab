@@ -13,4 +13,8 @@ urlpatterns = [
   path('flowers/<int:flower_id>/', views.flowers_detail, name='flowers_detail'),
   # new route used to show a form and create a flower
   path('flowers/create/', views.FlowerCreate.as_view(), name='flowers_create'),
+  # new route used to update a flower
+  path('flowers/<int:pk>/update/', views.FlowerUpdate.as_view(), name='flowers_update'),
+  # new route used to delete a flower
+  path('flowers/<int:pk>/delete/', views.FlowerDelete.as_view(), name='flowers_delete'),
 ]

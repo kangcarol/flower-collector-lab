@@ -10,24 +10,31 @@
 {% endblock %}
 
 {% block content %}
-
-<section class='flower-container'>
-  <div class="flower-img">
+<div class='detail-container'>
+<section class='flower-detail-container'>
+  <div class="flower-detail-img">
     <img 
     src="{% static 'images/'|add:flower.name|add:'.png' %}"
     alt="flower"
-    width="250px"
-    height="250px"
+    width="100%"
+    height="100%"
     >
   </div>
   <h2 class="card-title">{{ flower.name }}</h2>
-  {% comment %} {% if flower.color > 0 %} {% endcomment %}
-    {% comment %} <p>A {{ flower.color }} {{ flower.type }}</p> {% endcomment %}
-  {% comment %} {% else %} {% endcomment %}
-    <p>A {{ flower.type }} flower.</p>
-  {% comment %} {% endif %} {% endcomment %}
-  <p><small>{{ flower.location }}</small></p>
+  <p>A {{ flower.type }} flower.</p>
+  <p>{{ flower.location }}</p>
+  <p>{{ flower.description }}</p>
+
+  <div class="flower-actions">
+    <a href="{% url 'flowers_update' flower.id %}" class="btn">Edit</a>
+    <a href="{% url 'flowers_delete' flower.id %}" class="btn">Delete</a>
+  </div>
+
+</div>
+</section>
+
   </div>
 </section>
+</div>
 
 {% endblock %}

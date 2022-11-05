@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+# Add UdpateView & DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Flower
 
 # # Add the Flower class & list and view function below the imports
@@ -30,9 +31,18 @@ def flowers_index(request):
 
 def flowers_detail(request, flower_id):
   flower = Flower.objects.get(id=flower_id)
-  return render(request, 'cats/detail.html', { 'flower': flower })
+  return render(request, 'flowers/detail.html', { 'flower': flower })
 
 class FlowerCreate(CreateView):
   model = Flower
   fields = '__all__'
   # success_url = '/flowers/'
+
+class FlowerUpdate(UpdateView):
+  model = Flower
+  # Let's disallow the renaming of a cat by excluding the name field!
+  fields = ['name', 'type','location', 'description']
+
+class FlowerDelete(DeleteView):
+  model = Flower
+  success_url = '/flowers/'

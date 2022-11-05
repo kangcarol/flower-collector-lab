@@ -35,6 +35,7 @@
 .card p {
   margin: 5px 0;
   font-size: var(--font-reg);
+  padding: 0 0 8px 0;
 }
 
 .card-img {

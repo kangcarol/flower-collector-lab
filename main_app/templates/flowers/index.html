@@ -33,12 +33,10 @@
           >
         </div>
         <h2 class="card-title">{{ flower.name }}</h2>
-        {% comment %} {% if flower.color > 0 %} {% endcomment %}
-          {% comment %} <p>A {{ flower.color }} {{ flower.type }}</p> {% endcomment %}
-        {% comment %} {% else %} {% endcomment %}
-          <p>A {{ flower.type }} flower.</p>
-        {% comment %} {% endif %} {% endcomment %}
+        <p>A {{ flower.type }} flower.</p>
         <p><small>{{ flower.location }}</small></p>
+        <p><small>{{ flower.description }}</small></p>
+        
       </div>
     </div>
   {% endfor %}

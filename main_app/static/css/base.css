@@ -137,29 +137,22 @@ nav li {
 }
 
 .submit {
-  color: var(--submit);
-  border-color: var(--submit);
+  background-color: rgb(211, 180, 180);
+  border: 3px solid rgb(209, 207, 207);
+  font-size: 14px;
+  color:  #362C28;
 }
 
-.secondary {
-  color: var(--secondary);
-  border-color: var(--secondary);
-}
-
-.warn {
-  color: var(--warn);
-  border-color: var(--warn);
-}
-
-.danger {
-  color: var(--danger);
-  border-color: var(--danger);
+.btn {
+  background-color: rgb(211, 180, 180);
+  border: 3px solid rgb(209, 207, 207);
+  color:  #362C28;
+  font-size: 14px;
 }
 
 .page-header h1 {
   font-size: var(--font-xxl);
   margin: 0;
-  /* color: #362C28; */
 }
 
 .page-header img {
