@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/delete-confirm.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1 class="delete-flower">Delete Flower?</h1>
+</div>
+<img class="delete-flower" src="{% static 'images/'|add:flower.name|add:'.png' %}"/>
+<h2>Are you sure you want to delete {{ flower.name }}?</h2>
+
+<form action="" method="POST" class="form">
+  {% csrf_token %}
+  <a 
+    href="{% url 'flowers_detail' flower.id %}" 
+    class="btn"
+  >
+    Cancel
+  </a>
+  <button type="submit" class="btn">Yes - Delete!</button>
+</form>
+
+{% endblock %}
