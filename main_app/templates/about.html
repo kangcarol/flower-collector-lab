@@ -1,11 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/about.css' %}"
+/>
+{% endblock %}
 
 {% block content %}
-
-<h1>About the Flower Collector</h1>
-<hr />
-<p class="page-content">
-  I like pretty things.
-</p>
+<div class='about-container'>
+  <h1>About The Botanist's Library</h1>
+  <hr />
+  <p class="page-content">
+    Discover the extraordinary diversity and beauty of flowers.
+  </p>
+  <p class="page-content">
+    Add your favorite flowers for others to learn about.
+  </p>
+<div>
 
 {% endblock content %}

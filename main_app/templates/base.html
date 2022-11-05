@@ -34,6 +34,7 @@
     </div>
     <nav>
       <ul>
+        <li {% if request.path == '/' %} style="display: none;" {% endif %}><a href="/">The Botanist's Library</a></li>
         <li><a href="/flowers">All Flowers</a></li>
         <li><a href="{% url 'flowers_create' %}">Add a Flower</a></li>
         <li><a href="/about">About</a></li>
