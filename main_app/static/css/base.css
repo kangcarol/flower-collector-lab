@@ -74,9 +74,10 @@ h2 {
 
 nav a {
   text-decoration: none;
-  color: #cc3363;
+  color: #f80351;
+  text-shadow: rgb(205, 201, 210) 3px 0 10px;
   font-weight: 600;
-  font-size: 2.25em;
+  font-size: 2.5em;
 }
 
 nav a:hover {
