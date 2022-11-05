@@ -12,11 +12,11 @@
 {% block content %}
 
 <section class="page-header">
-  <h1>Flower List</h1>
-  <img src="{% static 'images/Camellia.png' %}" alt="camellia" />
-  <img src="{% static 'images/Gloriosa.png' %}" alt="gloriosa" />
-  <img src="{% static 'images/Peony.png' %}" alt="peony" />
-  <img src="{% static 'images/Hydrangea.png' %}" alt="hydrangea" />
+  <h1>Flower Collection</h1>
+  {% comment %} <img class="img-small" src="{% static 'images/Camellia.png' %}" alt="camellia" />
+  <img class="img-small" src="{% static 'images/Gloriosa.png' %}" alt="gloriosa" />
+  <img class="img-small" src="{% static 'images/Peony.png' %}" alt="peony" />
+  <img class="img-small" src="{% static 'images/Hydrangea.png' %}" alt="hydrangea" /> {% endcomment %}
 </section>
 
 <section class="card-container">
@@ -25,7 +25,7 @@
       <a href="/flowers/{{ flower.id }}">
       <div class="card-content">
         <div class="card-img-container">
-          <img 
+          <img class="card-img"
             src="{% static 'images/'|add:flower.name|add:'.png' %}"
             alt="flower"
             width="250px"
