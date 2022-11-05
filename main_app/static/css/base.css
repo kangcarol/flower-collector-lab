@@ -42,7 +42,7 @@ body {
   --font-l: 1.8rem;
   --font-reg: 1.6rem;
   --card-border-radius: 10%;
-  background-color: rgb(230, 219, 218) 
+  background-color: rgb(216, 201, 199) 
   /* background-color: rgb(197, 200, 186)  */
 }
 
@@ -112,7 +112,7 @@ nav li {
   display: flex;
   align-items: center;
   margin: 20px 80px;
-  padding: 0 30px;
+  padding: 0 75px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -159,6 +159,7 @@ nav li {
 .page-header h1 {
   font-size: var(--font-xxl);
   margin: 0;
+  /* color: #362C28; */
 }
 
 .page-header img {
