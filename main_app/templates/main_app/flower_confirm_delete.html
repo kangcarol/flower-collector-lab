@@ -10,7 +10,7 @@
 <div class="page-header">
   <h1 class="delete-flower">Delete Flower?</h1>
 </div>
-<img class="delete-flower" src="{% static 'images/'|add:flower.name|add:'.png' %}"/>
+<img class="delete-flower" src="{% static 'images/'|add:flower.name|add:'.png' %}" width='20%' height='20%'/>
 <h2>Are you sure you want to delete {{ flower.name }}?</h2>
 
 <form action="" method="POST" class="form">

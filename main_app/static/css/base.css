@@ -43,14 +43,17 @@ body {
   --font-reg: 1.6rem;
   --card-border-radius: 10%;
   background-color: rgb(216, 201, 199) 
-  /* background-color: rgb(197, 200, 186)  */
 }
 
 header {
   width: 100%;
   background: var(--nav-bg-ff);
   border-bottom: var(--borders);
-  margin: 20px 120px 0 120px;
+  margin: 0px 0px 0 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 nav {
@@ -78,6 +81,8 @@ nav a {
   text-shadow: rgb(205, 201, 210) 3px 0 10px;
   font-weight: 600;
   font-size: 2.5em;
+  justify-content: center;
+  flex-direction: row;
 }
 
 nav a:hover {
@@ -97,25 +102,25 @@ nav li {
 
 .header-logo-container {
   margin: auto;
-  padding: 30px 20px 0 20px;
+  /* padding: 30px 0px 0 20px; */
   max-width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header-logo {
+/* .header-logo {
   border-radius: 50%;
 
-}
+} */
 
 .page-header {
   display: flex;
   align-items: center;
-  margin: 20px 80px;
-  padding: 0 75px;
-  display: flex;
-  justify-content: flex-start;
+  /* margin: 20px 80px; */
+  /* padding: 0 75px; */
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -151,6 +156,10 @@ nav li {
   font-size: 14px;
 }
 
+.page-header {
+  padding: 5% 0 1% 0;
+}
+
 .page-header h1 {
   font-size: var(--font-xxl);
   margin: 0;
@@ -161,9 +170,14 @@ nav li {
   margin-left:15px;
 }
 
-.page-header img:first-of-type {
-  margin-left: 20px;
+.logo-flower {
+  width: 600%;
+  height: 600%;
 }
+
+/* .page-header img:first-of-type {
+  margin-left: 20px;
+} */
 
 .page-content {
   font-size: var(--font-reg);
@@ -186,9 +200,8 @@ nav li {
   nav,
   .header-logo-container {
     margin: 10px 0;
-    padding: 0 15px;
+    padding: 0 0 15px 0;
   }
-
   
   /* visual fix to help align logo */
   .header-logo-container {
@@ -199,7 +212,6 @@ nav li {
     width: 100vw;
     margin-left: auto;
     display: flex;
-    justify-content: center;
     justify-content: flex-end;
     align-items: center;
   }
@@ -280,11 +292,5 @@ nav li {
       backdrop-filter: none;
     }
 
-    nav,
-    .header-logo-container {
-      /* background: rgba(104, 197, 248, .6);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px); */
-    }
   }
 }

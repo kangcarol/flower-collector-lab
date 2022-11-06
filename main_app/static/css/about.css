@@ -1,4 +1,10 @@
 .about-container {
   width: 100%;
   padding: 15% 30%;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: xx-large;
+  font-weight: 200;
 }

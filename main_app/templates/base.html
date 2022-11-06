@@ -23,12 +23,11 @@
 <body>
   <header>
     <div class="header-logo-container">
-      <a href="/">
+      <a {% if request.path == '/' %} style="display: none;" {% endif %} href="/">
         <img 
           src="{% static 'images/camellia-logo.png' %}" 
           alt="Logo"
-          width='400px'
-          height='400px'
+          class="logo-flower"
         >
       </a>
     </div>
