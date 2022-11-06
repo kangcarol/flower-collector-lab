@@ -28,7 +28,7 @@ body {
   /* --nav-bg-ff: rgba(104, 197, 248, .9); */
   /* --borders: rgb(36, 116, 248) solid 2px; */
   --text-color: #362C28;
-  --link-hover-color: #03d16a;
+  --link-hover-color: #014423;
   --button-bg: rgb(201, 246, 223);
   --button-bg-hover: rgb(226, 226, 226);
   --submit: rgb(26, 128, 0);
@@ -58,6 +58,9 @@ header {
 
 nav {
   margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 ul {
@@ -122,6 +125,7 @@ nav li {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 8% 0 1% 0;
 }
 
 .btn {
@@ -154,10 +158,6 @@ nav li {
   border: 3px solid rgb(209, 207, 207);
   color:  #362C28;
   font-size: 14px;
-}
-
-.page-header {
-  padding: 5% 0 1% 0;
 }
 
 .page-header h1 {
@@ -197,7 +197,7 @@ nav li {
     min-height: calc(100vh - 53px);
   }
 
-  nav,
+  /* nav,
   .header-logo-container {
     margin: 10px 0;
     padding: 0 0 15px 0;
@@ -206,7 +206,13 @@ nav li {
   /* visual fix to help align logo */
   .header-logo-container {
     padding-top: 3px;
-  }
+  } */
+  
+
+
+
+
+
   
   nav {
     width: 100vw;

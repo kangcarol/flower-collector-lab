@@ -5,12 +5,23 @@ main {
   justify-content: center;
 }
 
-.page-header h1{
+.delete-flower div{
+  padding: 0px;
+}
+
+.delete-flower h1{
   font-size: x-large;
-  padding: 10% 0 5% 0;
+  text-align: center;
+  width: 100%;
 }
 
 h2 {
   font-size: medium;
   text-align: center;
+}
+
+.delete-flower{
+  width: 50%;
+  max-width: 350px;
+  border-radius: 5%;
 }

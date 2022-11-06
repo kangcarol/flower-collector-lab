@@ -17,17 +17,19 @@ main {
   flex-direction: column;
   justify-content: center;
   width: 60%;
-  padding: 10% 0% 0 0;
+  padding: 3% 0% 0 10%;
 }
 
-.flower-detail-img {
+/* .flower-detail-img {
   width: 50%;
   max-width: 350px;
   border-radius: 5%;
-}
+} */
 
 img {
   border-radius: 5%; 
+  width: 70%;
+  /* height: 120%; */
 }
 
 .usr-img {
@@ -46,6 +48,7 @@ img {
 p {
   font-size: medium;
   margin: 8px;
+  width: 70%;
 }
 
 .flower-actions {
