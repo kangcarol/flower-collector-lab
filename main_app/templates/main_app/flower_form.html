@@ -8,7 +8,11 @@
 {% block content %}
 
 <div class="page-header">
-  <h1>Add a Flower</h1>
+  {% if flower %}
+  <h1>Edit {{ flower.name }}</h1>
+  {% else %}
+    <h1>Add a Flower</h1>
+  {% endif %}
 </div>
 
 <form action="" method="POST" class="form-container">

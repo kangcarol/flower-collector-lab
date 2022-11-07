@@ -27,6 +27,7 @@ main > section {
   max-width: 375px;
   display: flex;
   justify-content: flex-start;
+  padding: 10% 0 0 0;
 }
 
 .flower-container {
@@ -78,6 +79,7 @@ main > section {
 @media only screen and (min-width: 768px) {
   main {
     justify-content: space-around;
+    padding: 0;
   }
 
   main > section {
@@ -94,6 +96,10 @@ main > section {
 
   .logo-container {
     max-width: 520px;
+  }
+
+  .flower-container {
+    max-width: 60%;
   }
 }
 
