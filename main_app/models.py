@@ -22,7 +22,7 @@ class Flower(models.Model):
     return reverse('flowers_detail', kwargs={'flower_id': self.id})
 
   def care_for_month(self):
-    return self.feeding_set.filter(year=today.year(), month=date.today.month()).count() >= len(CARE)
+    return self.care_set.filter(date=date.today()).count() >= len(CARE)
 
 class Care(models.Model):
   date = models.DateField('Date')
@@ -31,6 +31,7 @@ class Care(models.Model):
     choices=CARE,
     default=CARE[0][0]
   )
+
   flower = models.ForeignKey(Flower, on_delete=models.CASCADE)
 
   def __str__(self):

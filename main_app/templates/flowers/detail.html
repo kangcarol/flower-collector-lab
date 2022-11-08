@@ -3,10 +3,20 @@
 
 {% block head %}
 <link 
+  href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css" 
+  rel="stylesheet" 
+/>
+<link rel="stylesheet" href="{% static 'css/mcdp.css' %}">
+<script 
+  src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js"
+>
+</script>
+<link 
   rel="stylesheet"
   type="text/css"
   href="{% static 'css/flowers/flower-detail.css' %}"
 />
+<script defer src="{% static 'js/flower-detail.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -29,11 +39,53 @@
     <a href="{% url 'flowers_update' flower.id %}" class="btn">Edit</a>
     <a href="{% url 'flowers_delete' flower.id %}" class="btn">Delete</a>
   </div>
-
 </div>
 </section>
 
-  </div>
+<div class="care-garden-container">
+  <section class="care">
+    <div class="subsection-title">
+      <h2>Care</h2>
+    </div> 
+    <h3>Add Care</h3>
+    <form
+      action="{% url 'add_care' flower.id %}"
+      method="POST"
+      class="subsection-content"
+    >
+      {% comment %} {% if flower.care_for_month %}
+        <p class="cared">
+          {{ flower.name }} has been tended to this month.
+        </p>
+      {% else %}
+        <p class="uncared">
+          {{ flower.name }} needs care.
+        </p>
+      {% endif %} {% endcomment %}
+      {% csrf_token %}
+      {{ care_form.as_p }}
+      <button type="submit" class="btn">Add Care</button>
+    </form>
+    <h3>Past Care</h3>
+    {% if flower.care_set.all.count %}
+      <table>
+        <thead>
+          <tr><th>Date</th><th>Care</th></tr>
+        </thead>
+        <tbody>
+          {% for care in flower.care_set.all %}
+            <tr>
+              <td>{{ care.date }}</td>
+              <td>{{ care.get_care_display }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+    <div class="subsection-content">
+      <p>{{ flower.name }} has never been tended to.</p>
+    </div>
+  {% endif %}
 </section>
 </div>
 

@@ -17,7 +17,10 @@ def flowers_index(request):
 
 def flowers_detail(request, flower_id):
   flower = Flower.objects.get(id=flower_id)
-  return render(request, 'flowers/detail.html', { 'flower': flower })
+  care_form = CareForm()
+  return render(request, 'flowers/detail.html', {
+    'flower': flower, 'care_form': care_form
+  })
 
 class FlowerCreate(CreateView):
   model = Flower
@@ -52,7 +55,7 @@ class GardenDetail(DetailView):
 
 class GardenUpdate(UpdateView):
   model = Garden
-  fields = ['name', 'color']
+  fields = ['name', 'location']
 
 class GardenDelete(DeleteView):
   model = Garden
