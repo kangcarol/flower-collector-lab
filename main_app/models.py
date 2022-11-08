@@ -22,7 +22,14 @@ class Flower(models.Model):
     return reverse('flowers_detail', kwargs={'flower_id': self.id})
 
   def care_for_month(self):
-    return self.care_set.filter(date=date.today()).count() >= len(CARE)
+    return self.care_set.filter(date=date.month.today()).count() >= len(CARE)
+
+  def save(self, *args, **kwargs):
+    for field_name in ['name']:
+      val = getattr(self, field_name, False)
+      if val:
+        setattr(self, field_name, val.upper())
+    super(Flower, self).save(*args, **kwargs)
 
 class Care(models.Model):
   date = models.DateField('Date')
@@ -49,3 +56,12 @@ class Garden(models.Model):
 
   def get_absolute_url(self):
     return reverse('gardens_detail', kwargs={'pk': self.id})
+
+  def save(self, *args, **kwargs):
+    for field_name in ['name', 'location']:
+      val = getattr(self, field_name, False)
+      if val:
+        setattr(self, field_name, val.upper())
+    super(Garden, self).save(*args, **kwargs)
+
+    
