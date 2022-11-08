@@ -13,4 +13,17 @@
     </div>
   </section>
 
-{% endblock %}
+  {% if not user.is_authenticated %}
+    <section>
+      <form action="{% url 'home' %}" method="post" class="login">
+        <h1>Login</h1>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="next" value="{{ next }}">
+        {% comment %} this will take them back to the page that they originally wanted to go {% endcomment %}
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </section>
+  {% endif %}
+  
+{% endblock %}  

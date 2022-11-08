@@ -1,3 +1,8 @@
+
+* {
+  border: 1px solid red;
+}
+
 body {
   background: url('../images/home.png') no-repeat center center fixed; 
   background-size: cover;
@@ -27,12 +32,13 @@ main > section {
   max-width: 375px;
   display: flex;
   justify-content: flex-start;
-  padding: 10% 0 0 0;
+  padding: 0% 0 0 0;
 }
 
 .flower-container {
   width: 100%;
   padding: 0 0 0 10%;
+  margin: 0;
 }
 
 .flower-container h1 {

@@ -20,14 +20,15 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 60%;
-  padding: 3% 0% 3% 0%;
+  width: 65%;
+  padding: 3% 0% 6% 0%;
 }
 
 .flower-card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 2%;
 }
 
 .flower-detail-img {
@@ -87,6 +88,8 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  height: fit-content;
+  block-size: fit-content;
 }
 
 .color-block {
@@ -140,7 +143,7 @@ p {
   width: 80%;
   min-width: 360px;
   border: var(--borders);
-  border-radius: var(--card-border-radius);
+  /* border-radius: var(--card-border-radius); */
   padding: 10px;
   box-shadow: var(--card-box-shadow);
   display: flex;
@@ -202,16 +205,17 @@ a {
 
 .care th {
   font-size: var(--font-l);
-  padding: 5px 5px 0;
-  border-bottom: rgb(36, 116, 248) solid 2px;
+  padding: 5px 5px 5px 0;
+  border-bottom: var(--text-color) solid 2px;
 }
 
 .care tr:nth-child(even) {
-  background-color: #f3f3fd;
+  /* background-color: #f3f3fd; */
 }
 
 .garden-container p {
   margin: 12px 0;
+  width: 100%;
 }
 
 .garden-container a {

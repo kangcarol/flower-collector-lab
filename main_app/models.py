@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from datetime import date
+from django.contrib.auth.models import User
 
 CARE = (
   ('W', 'Water'),
@@ -35,6 +36,8 @@ class Flower(models.Model):
   description = models.TextField(max_length=250)
     # Add the M:M relationship
   gardens = models.ManyToManyField(Garden)
+    # Add the foreign key linking to a user instance
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
   
   class Meta:
     ordering = ['name']
