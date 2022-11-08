@@ -1,7 +1,6 @@
 from django.urls import path
 from . import views
 
-
 urlpatterns = [
   # localhost:8000/
   path('', views.home, name='home'),
@@ -17,4 +16,10 @@ urlpatterns = [
   path('flowers/<int:pk>/update/', views.FlowerUpdate.as_view(), name='flowers_update'),
   # new route used to delete a flower
   path('flowers/<int:pk>/delete/', views.FlowerDelete.as_view(), name='flowers_delete'),
+  path('flowerss/<int:flower_id>/add_care/', views.add_care, name='add_care'),
+  path('gardens/create/', views.GardenCreate.as_view(), name='gardens_create'),
+  path('gardens/<int:pk>/', views.GardenDetail.as_view(), name='gardens_detail'),
+  path('gardens/', views.GardenList.as_view(), name='gardens_index'),
+  path('gardens/<int:pk>/update/', views.GardenUpdate.as_view(), name='gardens_update'),
+  path('gardens/<int:pk>/delete/', views.GardenDelete.as_view(), name='gardens_delete'),
 ]
