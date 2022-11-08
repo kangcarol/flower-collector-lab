@@ -3,6 +3,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from .models import Flower, Garden
 from .forms import CareForm
@@ -14,10 +16,12 @@ class Home(LoginView):
 def about(request):
   return render(request, 'about.html')
 
+@login_required
 def flowers_index(request):
-  flowers = Flower.objects.all()
+  flowers = Flower.objects.filter(user=request.user)
   return render(request, 'flowers/index.html', { 'flowers': flowers })
 
+@login_required
 def flowers_detail(request, flower_id):
   flower = Flower.objects.get(id=flower_id)
   gardens_not_planted_in = Garden.objects.exclude(id__in = flower.gardens.all().values_list('id'))
@@ -26,7 +30,7 @@ def flowers_detail(request, flower_id):
     'flower': flower, 'care_form': care_form, 'gardens' : gardens_not_planted_in
   })
 
-class FlowerCreate(CreateView):
+class FlowerCreate(LoginRequiredMixin, CreateView):
   model = Flower
   fields = ['name', 'type', 'location', 'description']
 
@@ -36,14 +40,15 @@ class FlowerCreate(CreateView):
     # Let the CreateView do its job as usual
     return super().form_valid(form)
 
-class FlowerUpdate(UpdateView):
+class FlowerUpdate(LoginRequiredMixin, UpdateView):
   model = Flower
   fields = ['name', 'type','location', 'description']
 
-class FlowerDelete(DeleteView):
+class FlowerDelete(LoginRequiredMixin, DeleteView):
   model = Flower
   success_url = '/flowers/'
 
+@login_required
 def add_care(request, flower_id):
   form = CareForm(request.POST)
   if form.is_valid():
@@ -52,24 +57,25 @@ def add_care(request, flower_id):
     new_care.save()
   return redirect('flowers_detail', flower_id=flower_id)
 
-class GardenCreate(CreateView):
+class GardenCreate(LoginRequiredMixin, CreateView):
   model = Garden
   fields = '__all__'
 
-class GardenList(ListView):
+class GardenList(LoginRequiredMixin, ListView):
   model = Garden
 
-class GardenDetail(DetailView):
+class GardenDetail(LoginRequiredMixin, DetailView):
   model = Garden
 
-class GardenUpdate(UpdateView):
+class GardenUpdate(LoginRequiredMixin, UpdateView):
   model = Garden
   fields = ['name', 'location']
 
-class GardenDelete(DeleteView):
+class GardenDelete(LoginRequiredMixin, DeleteView):
   model = Garden
   success_url = '/gardens/'
 
+@login_required
 def assoc_garden(request, flower_id, garden_id):
   # Note that you can pass a garden's id instead of the whole object
   Flower.objects.get(id=flower_id).gardens.add(garden_id)

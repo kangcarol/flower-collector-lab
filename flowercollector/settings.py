@@ -124,6 +124,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Add this variable to specify where decorators and mixins should redirect to
+LOGIN_URL = 'home'
+
 # Add this variable to specify where successful logins should redirect to
 LOGIN_REDIRECT_URL = 'flowers_index'
 
