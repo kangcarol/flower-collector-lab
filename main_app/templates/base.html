@@ -40,7 +40,7 @@
           <li><a href="{% url 'flowers_create' %}">Add a Flower</a></li>
           <li><a href="{% url 'gardens_create' %}">Add a Garden</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'logout' %}">Log out</a></li>
+          <li><a href="{% url 'logout' %}">Log Out</a></li>
         {% else %}
           <li {% if request.path == '/' %} style="display: none;" {% endif %}><a href="/">The Botanist's Library</a></li>
           <li><a href="{% url 'about' %}">About</a></li>

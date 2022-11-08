@@ -14,7 +14,7 @@
   </section>
 
   {% if not user.is_authenticated %}
-    <section>
+    <section class="login-section">
       <form action="{% url 'home' %}" method="post" class="login">
         <h1>Login</h1>
         {% csrf_token %}
@@ -23,6 +23,9 @@
         {% comment %} this will take them back to the page that they originally wanted to go {% endcomment %}
         <button type="submit" class="btn">Login</button>
       </form>
+    </section>
+  {% else %}
+    <section class="login-section-ghost">
     </section>
   {% endif %}
   
