@@ -1,8 +1,8 @@
 main {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  min-height: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {

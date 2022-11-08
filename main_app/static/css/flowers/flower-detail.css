@@ -1,6 +1,10 @@
+* {
+  border: 1px solid red;
+}
+
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -14,23 +18,30 @@ main {
 
 .flower-detail-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   width: 60%;
-  padding: 3% 0% 0 10%;
+  padding: 3% 0% 3% 0%;
 }
 
-/* .flower-detail-img {
-  width: 50%;
+.flower-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flower-detail-img {
+  height: 100%;
+  width: 100%;
   max-width: 350px;
   border-radius: 5%;
-} */
-
+}
+/* 
 img {
   border-radius: 5%; 
   width: 70%;
   /* height: 120%; */
-}
+} */
 
 .usr-img {
   width: 100%;
@@ -48,14 +59,14 @@ img {
 p {
   font-size: medium;
   margin: 8px;
-  width: 70%;
+  width: 100%;
 }
 
 .flower-actions {
   margin-top: 20px;
 }
 
-.feedings-toy-container {
+.care-garden-container {
   display: flex;
   flex-direction: column;
   padding-bottom: 20px;
@@ -72,7 +83,7 @@ p {
   margin: 0 8px;
 }
 
-.toy-container {
+.garden-container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -85,21 +96,21 @@ p {
   margin-right: 10px;
 }
 
-.unfed,
-.fed,
-.no-toys,
-.all-toys {
+.uncared,
+.cared,
+.no-gardens,
+.all-gardens {
   margin: 0;
   font-weight: bold;
 }
 
-.unfed,
-.no-toys {
+.uncared,
+.no-gardens {
   color: var(--danger);
 }
 
-.fed,
-.all-toys {
+.cared,
+.all-gardens {
   color: var(--submit);
 }
 
@@ -125,7 +136,7 @@ p {
   margin: 5px 0;
 }
 
-.feedings-toy-container > section {
+.care-garden-container > section {
   width: 80%;
   min-width: 360px;
   border: var(--borders);
@@ -147,16 +158,22 @@ p {
   margin-left: 16px;
 }
 
-.feedings h2,
-.toys h2 {
-  font-size: 3.2rem;
+.care h2,
+.gardens h2 {
+  font-size: 2.8rem;
   margin: 0;
+  color: #f80351;
 }
 
-.feedings h3,
-.toys h3 {
+.care h3,
+.gardens h3 {
   font-size: var(--font-xl);
   margin: 10px 0;
+  color: green;
+}
+
+a {
+  text-decoration: none;
 }
 
 .subsection-content p,
@@ -171,38 +188,38 @@ p {
   padding: 3px;
 }
 
-.feedings table {
+.care table {
   width: calc(100% - 16px);
   text-align: left;
   border-collapse: collapse;
   margin: 0 8px;
 }
 
-.feedings td {
+.care td {
   padding: 8px 5px;
   font-size: var(--font-reg);
 }
 
-.feedings th {
+.care th {
   font-size: var(--font-l);
   padding: 5px 5px 0;
   border-bottom: rgb(36, 116, 248) solid 2px;
 }
 
-.feedings tr:nth-child(even) {
+.care tr:nth-child(even) {
   background-color: #f3f3fd;
 }
 
-.toy-container p {
+.garden-container p {
   margin: 12px 0;
 }
 
-.toy-container a {
+.garden-container a {
   text-decoration: none;
   color: #111;
 }
 
-.toy-container .btn {
+.garden-container .btn {
   padding: 3px 10px;
   margin-left: 10px;
 }
@@ -232,20 +249,20 @@ p {
     margin-right: 25px;
   }
 
-  .feedings-toy-container {
+  .care-garden-container {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
   }
 
-  .feedings-toy-container > section {
+  .care-garden-container > section {
     width: 45%;
   }
 
 }
 
 @media only screen and (min-width: 1024px) {
-  .feedings-toy-container {
+  .care-garden-container {
     padding: 0 40px;
   }
 }

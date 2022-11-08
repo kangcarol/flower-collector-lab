@@ -30,14 +30,16 @@
     height="100%"
     >
   </div>
-  <h2 class="card-title">{{ flower.name }}</h2>
-  <p>A {{ flower.type }} flower.</p>
-  <p>{{ flower.location }}</p>
-  <p>{{ flower.description }}</p>
+  <div class="flower-card-text">
+    <h2 class="card-title">{{ flower.name }}</h2>
+    <p>A {{ flower.type }} flower.</p>
+    <p>{{ flower.location }}</p>
+    <p>{{ flower.description }}</p>
 
-  <div class="flower-actions">
-    <a href="{% url 'flowers_update' flower.id %}" class="btn">Edit</a>
-    <a href="{% url 'flowers_delete' flower.id %}" class="btn">Delete</a>
+    <div class="flower-actions">
+      <a href="{% url 'flowers_update' flower.id %}" class="btn">Edit</a>
+      <a href="{% url 'flowers_delete' flower.id %}" class="btn">Delete</a>
+    </div>
   </div>
 </div>
 </section>
