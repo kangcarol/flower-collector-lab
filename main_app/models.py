@@ -8,11 +8,33 @@ CARE = (
   ('R', 'Repotting')
 )
 
+class Garden(models.Model):
+  name = models.CharField(max_length=50)
+  location = models.CharField(max_length=20)
+
+  class Meta:
+    ordering = ['name']
+
+  def __str__(self):
+    return self.name
+
+  def get_absolute_url(self):
+    return reverse('gardens_detail', kwargs={'pk': self.id})
+
+  def save(self, *args, **kwargs):
+    for field_name in ['name', 'location']:
+      val = getattr(self, field_name, False)
+      if val:
+        setattr(self, field_name, val.upper())
+    super(Garden, self).save(*args, **kwargs)
+
 class Flower(models.Model):
   name = models.CharField(max_length=100)
   type = models.CharField(max_length=100)
   location = models.TextField(max_length=250)
   description = models.TextField(max_length=250)
+    # Add the M:M relationship
+  gardens = models.ManyToManyField(Garden)
   
   class Meta:
     ordering = ['name']
@@ -49,25 +71,5 @@ class Care(models.Model):
 
   class Meta:
     ordering = ['-date']
-
-class Garden(models.Model):
-  name = models.CharField(max_length=50)
-  location = models.CharField(max_length=20)
-
-  class Meta:
-    ordering = ['name']
-
-  def __str__(self):
-    return self.name
-
-  def get_absolute_url(self):
-    return reverse('gardens_detail', kwargs={'pk': self.id})
-
-  def save(self, *args, **kwargs):
-    for field_name in ['name', 'location']:
-      val = getattr(self, field_name, False)
-      if val:
-        setattr(self, field_name, val.upper())
-    super(Garden, self).save(*args, **kwargs)
 
     

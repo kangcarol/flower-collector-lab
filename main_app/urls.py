@@ -16,7 +16,9 @@ urlpatterns = [
   path('flowers/<int:pk>/update/', views.FlowerUpdate.as_view(), name='flowers_update'),
   # new route used to delete a flower
   path('flowers/<int:pk>/delete/', views.FlowerDelete.as_view(), name='flowers_delete'),
-  path('flowerss/<int:flower_id>/add_care/', views.add_care, name='add_care'),
+  path('flowers/<int:flower_id>/add_care/', views.add_care, name='add_care'),
+    # associate a toy with a cat (M:M)
+  path('flowers/<int:flower_id>/assoc_garden/<int:garden_id>/', views.assoc_garden, name='assoc_garden'),
   path('gardens/create/', views.GardenCreate.as_view(), name='gardens_create'),
   path('gardens/<int:pk>/', views.GardenDetail.as_view(), name='gardens_detail'),
   path('gardens/', views.GardenList.as_view(), name='gardens_index'),

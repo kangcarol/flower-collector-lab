@@ -17,14 +17,15 @@ def flowers_index(request):
 
 def flowers_detail(request, flower_id):
   flower = Flower.objects.get(id=flower_id)
+  gardens_not_planted_in = Garden.objects.exclude(id__in = flower.gardens.all().values_list('id'))
   care_form = CareForm()
   return render(request, 'flowers/detail.html', {
-    'flower': flower, 'care_form': care_form
+    'flower': flower, 'care_form': care_form, 'gardens' : gardens_not_planted_in
   })
 
 class FlowerCreate(CreateView):
   model = Flower
-  fields = '__all__'
+  fields = ['name', 'type', 'location', 'description']
   # success_url = '/flowers/'
 
 class FlowerUpdate(UpdateView):
@@ -60,3 +61,8 @@ class GardenUpdate(UpdateView):
 class GardenDelete(DeleteView):
   model = Garden
   success_url = '/gardens/'
+
+def assoc_garden(request, flower_id, garden_id):
+  # Note that you can pass a garden's id instead of the whole object
+  Flower.objects.get(id=flower_id).gardens.add(garden_id)
+  return redirect('flowers_detail', flower_id=garden_id) 

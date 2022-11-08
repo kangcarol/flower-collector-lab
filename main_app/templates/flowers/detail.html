@@ -87,6 +87,62 @@
     </div>
   {% endif %}
 </section>
+
+{% comment %} Add this section below the CLOSING tag (</section>) for <section class="care"> {% endcomment %}
+<section class="gardens">
+  <div class="subsection-title">
+    <h2>Gardens</h2>
+  </div>
+  <h3>{{ flower.name }}'s Gardens</h3>
+  <div class="subsection-content">
+    {% if flower.gardens.count %}
+      {% for garden in flower.gardens.all %}
+        <div class="garden-container">
+          <div 
+            class="color-block"
+
+
+            style="background-color: green"
+
+
+          ></div>
+          <a href="{% url 'gardens_detail' garden.id %}">
+            <p>{{ garden.name }} located in  {{ garden.location }} </p>
+          </a>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="no-gardens">{{flower.name}} is not in any gardens.</p>
+    {% endif %}
+  </div>
+    <h3>Available Gardens to Plant</h3>
+    <div class="subsection-content">
+      {% comment %} We'll display available toys here {% endcomment %}
+      {% if gardens.count %}
+        {% for garden in gardens.all %}
+          {% comment %} <div class="garden-container">
+            <div 
+              class="color-block"
+
+              style="background-color: green"
+
+            ></div> {% endcomment %}
+            <a href="{% url 'gardens_detail' garden.id %}">
+              <p>{{ garden.name }} located in  {{ garden.location }} </p>
+            </a>
+            <form action="{% url 'assoc_garden' flower.id garden.id %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="btn submit">Plant!</button>
+            </form>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="all-toys">
+          {{cat.name}} already planted in available gardens 🥳
+        </p>
+      {% endif %}
+    </div>
+  </section>
 </div>
 
 {% endblock %}
