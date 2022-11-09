@@ -28,6 +28,7 @@ Django, Python, Docker, HTML, CSS
  ## Credits
 - [Background Image](https://www.freepik.com)
 - [Font](https://fonts.google.com/)
+- Flower facts came from [Wikipedia](https://wikipedia.com/)
 
 <br>
 

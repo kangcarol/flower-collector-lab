@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  color: #014423;
 }
 
 .card {
@@ -61,4 +62,8 @@
 
 .page-header > img:first-of-type {
   margin-left: 15px;
+}
+
+h2 {
+  color:  green;
 }

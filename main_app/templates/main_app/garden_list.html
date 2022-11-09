@@ -18,9 +18,7 @@
 <section class="card-container">
   {% for garden in garden_list %}
   <div class="card">
-    {% comment %} MOVE TO CSS: style="border-color: {{ toy.color }} {% endcomment %}
     <div class="card-bg"></div>
-    {% comment %} style="background-color: {{ toy.color }}" {% endcomment %}
     <a href="{% url 'gardens_detail' garden.id %}">
       <div class="card-content">
         <h2>{{ garden.name }}</h2>
