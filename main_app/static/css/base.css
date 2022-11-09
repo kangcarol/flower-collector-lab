@@ -31,7 +31,7 @@ body {
   --link-hover-color: #014423;
   --button-bg: rgb(201, 246, 223);
   --button-bg-hover: rgb(226, 226, 226);
-  --submit: rgb(26, 128, 0);
+  /* --submit: rgb(26, 128, 0); */
   --card-box-shadow: 5px 5px 6px -1px #AAA;
   --font-xtreme: 4.2rem;
   --font-xxl: 3.6rem;

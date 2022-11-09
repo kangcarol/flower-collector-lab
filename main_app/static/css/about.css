@@ -1,10 +1,15 @@
 .about-container {
   width: 100%;
-  padding: 15% 30%;
+  padding: 15% 20%;
   font-weight: 200;
 }
 
 h1 {
-  font-size: xx-large;
-  font-weight: 200;
+  font-size: x-large;
+  font-weight: 400;
+}
+
+.page-content {
+  font-size: x-large;
+  font-weight: 200px;;
 }

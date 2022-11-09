@@ -1,7 +1,3 @@
-* {
-  border: 1px solid red;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -27,25 +23,26 @@ main {
 .flower-card-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
   padding: 0 2%;
 }
 
 .flower-detail-img {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   max-width: 350px;
   border-radius: 5%;
 }
-/* 
-img {
-  border-radius: 5%; 
-  width: 70%;
-  /* height: 120%; */
-} */
+
+img{
+  width: 100%;
+  border-radius: 5%;
+}
 
 .usr-img {
   width: 100%;
+  /* height: 100% */
   border-radius: var(--card-border-radius);
 }
 
@@ -82,6 +79,7 @@ p {
 
 .subsection-content {
   margin: 0 8px;
+  padding: 0 0 15px 0;
 }
 
 .garden-container {
@@ -152,6 +150,10 @@ p {
   margin-bottom: 20px;
 }
 
+.gardens {
+  overflow: scroll;
+}
+
 .subsection-title img {
   height: 42px;
   margin-left: 8px;
@@ -165,7 +167,7 @@ p {
 .gardens h2 {
   font-size: 2.8rem;
   margin: 0;
-  color: #f80351;
+  color:  #362C28;
 }
 
 .care h3,
@@ -177,6 +179,8 @@ p {
 
 a {
   text-decoration: none;
+  color:  #362C28;
+  text-align: left;
 }
 
 .subsection-content p,
@@ -220,7 +224,7 @@ a {
 
 .garden-container a {
   text-decoration: none;
-  color: #111;
+  color:  #362C28;
 }
 
 .garden-container .btn {

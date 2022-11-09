@@ -1,17 +1,30 @@
+.mc-display__data {
+  background-color:rgb(72, 104, 107);
+  color: white;
+}
+
 .mc-display__day {
   font-size:clamp(1.6rem, 8vw, 2rem);
+  background-color:rgb(72, 104, 107);
+  color: white;
 }
 
 .mc-display__date {
   font-size:clamp(8rem, 40vw, 11.2rem);
+  background-color:rgb(72, 104, 107);
+  color: white;
 }
 
 .mc-display__month {
   font-size: clamp(1.9rem, 9vw, 2.4rem);
+  background-color:rgb(72, 104, 107);
+  color: white;
 }
 
 .mc-display__year {
   font-size: clamp(3.8rem,18vw,4.8rem);
+  background-color:rgb(72, 104, 107);
+  color: white;
 }
 
 .mc-select__data--month, .mc-select__data--month span {
@@ -39,8 +52,18 @@
 
 .mc-table__weekday {
   padding: .5rem;
+  background-color:rgb(72, 104, 107);
+  color: white;
 }
 
 .mc-picker__footer {
   padding: 1.6rem 0;
+}
+
+.mc-picker__header {
+  color:rgb(72, 104, 107);
+}
+
+.mc-footer__section {
+  color:rgb(72, 104, 107);
 }
