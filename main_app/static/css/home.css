@@ -10,7 +10,7 @@ main {
   padding: 8% 12%;
   display: flex;
   justify-content: flex-start;
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-wrap: wrap;
   height: 100%;
   width: 100%;
@@ -30,6 +30,7 @@ main > section {
   max-width: 375px;
   display: flex;
   justify-content: flex-start;
+  padding: 0 0 0 2%;
 }
 
 .flower-container {
@@ -45,24 +46,27 @@ main > section {
 } */
 
 .flower-container h1 {
-  font-size: 15em;
+  font-size: 14em;
   font-weight: 200;
   color: #f80351;
+  margin: 30% 0 0 0;
+  width: 100%;
 }
 
 .login-section {
-  width: 30%;
+  width: 50%;
+  padding: 0 0 0 2%;
 }
 
 .login {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   /* border-radius: 0%; */
   /* padding: 0 0 0 10%; */
-  background-color:rgba(255, 255, 255, .4);
+  /* background-color:rgba(255, 255, 255, .4); */
   box-shadow: 0 0 25px rgba(255, 255, 255, 1);
   font-family: 'Raleway';
   font-weight: 300;
@@ -94,7 +98,7 @@ main > section {
 .login input {
   font-size: var(--font-l);
   padding: 2px 4px;
-  background-color:rgba(255, 255, 255, .5);
+  background-color:rgba(255, 255, 255, 1);
   border: none;
 }
 
@@ -106,12 +110,13 @@ main > section {
 
 @media only screen and (min-width: 768px) {
   main {
+    flex-direction: column;
     justify-content: space-around;
     padding: 0;
   }
 
   main > section {
-    width: 40%;
+    width: 100%;
   }
 
   .login {
