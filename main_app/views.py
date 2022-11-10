@@ -17,8 +17,9 @@ def about(request):
   return render(request, 'about.html')
 
 @login_required
+  # flowers = Flower.objects.filter(user=request.user)
 def flowers_index(request):
-  flowers = Flower.objects.filter(user=request.user)
+  flowers = Flower.objects.all()
   return render(request, 'flowers/index.html', { 'flowers': flowers })
 
 @login_required
