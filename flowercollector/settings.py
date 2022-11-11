@@ -9,7 +9,9 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import environ
+env = environ.Env()
+environ.Env.read_env()
 from pathlib import Path
 import os
 
@@ -84,8 +86,10 @@ DATABASES = {
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
         'HOST': 'db',
         'PORT': 5432,
+        'SECRET KEY': env('SECRET_KEY'),
     }
 }
+
 
 
 # Password validation

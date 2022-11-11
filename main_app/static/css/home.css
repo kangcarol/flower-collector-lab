@@ -35,18 +35,11 @@ main > section {
 
 .flower-container {
   width: 100%;
-  /* padding: 0 0 0 10%; */
   margin: 0;
 }
 
-/* h1 {
-  font-size: 3em;
-  font-weight: bold;
-  color: #f80351;
-} */
-
 .flower-container h1 {
-  font-size: 14em;
+  font-size: 11em;
   font-weight: 200;
   color: #f80351;
   margin: 30% 0 0 0;
@@ -54,7 +47,8 @@ main > section {
 }
 
 .login-section {
-  width: 50%;
+  width: 40%;
+  /* height: 40%; */
   padding: 0 0 0 2%;
 }
 
@@ -64,18 +58,15 @@ main > section {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  /* border-radius: 0%; */
-  /* padding: 0 0 0 10%; */
-  /* background-color:rgba(255, 255, 255, .4); */
   box-shadow: 0 0 25px rgba(255, 255, 255, 1);
   font-family: 'Raleway';
   font-weight: 300;
 }
 
 .login h1 {
-  font-size: clamp(4.2rem, 4vw, 5.8rem);
+  /* font-size: clamp(4.2rem, 4vw, 5.8rem); */
   margin: 10px 0;
-  font-size: 3em;
+  font-size: 2.25em;
   font-weight: bold;
   color: #f80351;
 }
@@ -90,7 +81,7 @@ main > section {
 .login label {
   font-size: var(--font-reg);
   margin-bottom: 6px;
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-weight: 300;
   color: #f80351;
 }

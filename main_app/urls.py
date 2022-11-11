@@ -25,4 +25,5 @@ urlpatterns = [
   path('gardens/<int:pk>/update/', views.GardenUpdate.as_view(), name='gardens_update'),
   path('gardens/<int:pk>/delete/', views.GardenDelete.as_view(), name='gardens_delete'),
   path('accounts/signup/', views.signup, name='signup'),
+  path('flowers/<int:flower_id>/add_photo/', views.add_photo, name='add_photo'),
 ]

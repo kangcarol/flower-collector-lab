@@ -21,18 +21,26 @@
       <a href="/flowers/{{ flower.id }}">
       <div class="card-content">
         <div class="card-img-container">
-          <img class="card-img"
-            src="{% static 'images/'|add:flower.name|add:'.png' %}"
+          {%if flower.photo.url%}
+            <img class="card-img"
+            src="{{flower.photo.url}}"
             alt="flower"
             width="250px"
             height="250px"
-          >
+            >
+          {% else%}
+            <img class="card-img"
+            src="{% static 'images/default.png' %}"
+            alt="default-flower"
+            width="250px"
+            height="250px"
+            >
+          {%endif%}
         </div>
         <h2 class="card-title">{{ flower.name }}</h2>
         <p>A {{ flower.type }} flower.</p>
         <p><small>{{ flower.location }}</small></p>
         <p><small>{{ flower.description }}</small></p>
-        
       </div>
     </div>
   {% endfor %}
