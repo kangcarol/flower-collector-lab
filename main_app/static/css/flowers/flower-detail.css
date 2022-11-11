@@ -17,7 +17,7 @@ main {
   flex-direction: row;
   justify-content: center;
   width: 75%;
-  padding: 3% 0% 6% 0%;
+  padding: 3% 0% 8% 0%;
 }
 
 .flower-card-text {
@@ -25,6 +25,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 2%;
+  width: 50%;
 }
 
 .flower-detail-img {
@@ -127,6 +128,12 @@ p {
 .flower-details h3 {
   margin: 20px 0 10px;
   font-size: var(--font-l);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: var(--font-l);
+  margin: 30px 0 0 0;
 }
 
 .flower-details p {
