@@ -10,6 +10,23 @@ h1 {
 }
 
 .page-content {
-  font-size: x-large;
+  font-size: 2em;
   font-weight: 200px;;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .about-container {
+    width: 100%;
+    padding: 0%;
+  }
+
+  .about-container h1 {
+    font-size: x-large;
+  }
+
+  .page-content {
+    width: 100%;
+    margin: 18px 0;
+  }
 }

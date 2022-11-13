@@ -40,7 +40,6 @@ body {
 
 header {
   width: 100%;
-  background: var(--nav-bg-ff);
   border-bottom: var(--borders);
   margin: 0px 0px 0 0px;
   display: flex;
@@ -90,11 +89,12 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: no wrap;
 }
 
 nav li {
   padding: 5px 15px;
+  text-align: center;
 }
 
 .header-logo-container {
@@ -165,16 +165,18 @@ nav li {
   font-size: var(--font-reg);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   header {
     position: sticky;
     display: flex;
     flex-direction: row;
     top: 0;
     align-items: center;
+    width: 90%;
   }
 
   main {
+    width: 90%;
     max-width: 1300px;
     min-height: calc(100vh - 53px);
   }
@@ -184,25 +186,30 @@ nav li {
     padding-top: 3px;
   } */
 
-  
   nav {
-    width: 100vw;
+    width: 90vw;
     margin-left: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
   }
 
- .header-logo{
+  .header-logo{
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-
   nav ul {
-    flex-wrap: nowrap;
-    justify-content: space-evenly
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav li {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
   }
 
   .page-header h1 {
@@ -220,7 +227,6 @@ nav li {
 
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header {
-      background: var(--nav-bg);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }

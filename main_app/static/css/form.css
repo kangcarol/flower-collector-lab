@@ -1,4 +1,4 @@
-main {
+.form main {
   width: 60%;
 }
 
@@ -55,4 +55,14 @@ td > input {
 
 .btn {
   align-self: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+  
+  .table {
+    width: 100%;
+  }
 }
