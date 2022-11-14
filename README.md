@@ -5,32 +5,38 @@
  <br>
 
 1. AAU Admin, I can add, delete and modify any flower, garden, care given.
-2. AAU I want to login/logout to access my flowers, to add, delete or modify. No other user can change my collection of flowers.
-3. AAU after logging in, I want to view a list of my flowers.
-4. AAU if I want to go back to the home page I can click The Botanist's Library on the nav bar.
+2. AAU I can to login/logout to access all flowers, to add, delete or modify. It is a community site.
+3. AAU I can add a flower or garden's information. After adding a flower, I can add an image.
+4. AAU after logging in, I can view a list of all flowers.
+5. AAU I can track the care given to any flower.
+6. AAU I can add the flower to any garden.
+7. AAU if I can to go back to the home page I can click The Botanist's Library on the nav bar.
 
 <br>
 
  ## Visuals
 
-<!-- ![landing](public/images/tapestry.png)
-![image](public/images/tapestry-admin.png) -->
+![landing](/main_app/static/images/the-botanists-library-landing.png)
+![image](/main_app/static/images/the-botanists-library-all-flowers.png)
 
 <br>
 
- <!-- ## Get started [here](https://carolkang-tapestry-app.fly.dev/) <br> -->
+ ## Get started [here](https://the-botanists-library.herokuapp.com/) <br>
+
 <br>
 
  ## Technologies Used
-Django, Python, Docker, HTML, CSS
+Django, Python, Docker, HTML, CSS, Heroku
+
 <br>
 
  ## Credits
 - [Background Image](https://www.freepik.com)
 - [Font](https://fonts.google.com/)
-- Flower facts came from [Wikipedia](https://wikipedia.com/)
+- Flower facts came primarily from [Wikipedia](https://wikipedia.com/) and [HGTV](https://www.hgtv.com/outdoors/flowers-and-plants)
 
 <br>
 
  ## Next Steps<br>
-- AWS for user to upload images<br>
+- AAU I want to be able to see the contributer's name next to the care give to a flower.
+- AAU I want to be able to add images/photos of gardens.
