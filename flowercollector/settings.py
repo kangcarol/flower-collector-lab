@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'the-botanists-library.wsgi.application'
+WSGI_APPLICATION = 'flowercollector.wsgi.application'
 
 
 # Database
