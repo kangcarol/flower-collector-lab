@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'the-botanists-library.urls'
+ROOT_URLCONF = 'flowercollector.urls'
 
 TEMPLATES = [
     {
