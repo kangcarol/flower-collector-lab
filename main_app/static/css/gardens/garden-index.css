@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  color: #014423;
+
 }
 
 .card {
@@ -13,7 +13,6 @@
   border: solid 2px;
   box-shadow: var(--card-box-shadow);
   position: relative;
-  background-color: rgb(159, 179, 165)
 }
 
 .card-bg{
@@ -66,5 +65,5 @@
 }
 
 h2 {
-  color:  green;
+  color: var(--text-color);
 }
