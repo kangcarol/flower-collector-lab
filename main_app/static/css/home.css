@@ -39,7 +39,7 @@ main > section {
 }
 
 .flower-container h1 {
-  font-size: 12em;
+  font-size: 10em;
   font-weight: 200;
   color: #f80351;
   margin: 35% 0 0 0;
@@ -57,7 +57,7 @@ main > section {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 80%;
   box-shadow: 0 0 25px rgba(255, 255, 255, 1);
   font-family: 'Raleway';
   font-weight: 300;
