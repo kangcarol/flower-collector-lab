@@ -1,7 +1,7 @@
 # The Botanist's Library
 
  ## Description
- The Botanist's Library is a collection of flowers. Each flower's data is contributed by a user.  The user can keep track of the care given to the flower, and which gardens it is planted.<br>
+ The Botanist's Library is a collection of flowers, contributed information and cared for by the community  The user can add flowers and gardens, keep track of the care given to the flower, and which gardens it is planted.<br>
  <br>
 
 1. AAU Admin, I can add, delete and modify any flower, garden, care given.
